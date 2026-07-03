@@ -399,6 +399,7 @@ local int gz_vacate(gz_statep state) {
 #if defined(STDC) || defined(Z_HAVE_STDARG_H)
 #include <stdarg.h>
 
+#if 0
 /* -- see zlib.h -- */
 int ZEXPORTVA gzvprintf(gzFile file, const char *format, va_list va) {
 #if defined(NO_vsnprintf) && !defined(ZLIB_INSECURE)
@@ -493,6 +494,7 @@ int ZEXPORTVA gzprintf(gzFile file, const char *format, ...) {
     va_end(va);
     return ret;
 }
+#endif
 
 #else /* !STDC && !Z_HAVE_STDARG_H */
 
